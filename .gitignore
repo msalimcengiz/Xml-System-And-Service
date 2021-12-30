@@ -1,6 +1,0 @@
-conf/conf.php
-vendor/
-xmlService/conf/connection.php
-xmlService/jobs/
-xmls/
-.DS_Store
