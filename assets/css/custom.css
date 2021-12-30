@@ -1,0 +1,39 @@
+.loading_screen{position: fixed;display: none;justify-content: center;align-self: center;width: 100%;height: 100%;background-color: black;opacity: 0.7;z-index: 9999999;top: 0;left: 0;}
+.loading_screen .loader{position: absolute; display: flex; justify-content: center; align-self: center; width: 50px; height: 50px; z-index: 6; top: calc(50% - 25px); left: calc(50% - 25px);}
+.loader, .loader:after {border-radius: 50%;width: 10em;height: 10em;}
+.loader {font-size: 10px;position: relative;text-indent: -9999em;border-top: 0.5em solid rgba(255, 255, 255, 0.2);border-right: 0.5em solid rgba(255, 255, 255, 0.2);border-bottom: 0.5em solid rgba(255, 255, 255, 0.2);border-left: 0.5em solid #ffffff;-webkit-transform: translateZ(0);-ms-transform: translateZ(0);transform: translateZ(0);-webkit-animation: load8 1.1s infinite linear;animation: load8 1.1s infinite linear;}
+
+@-webkit-keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes load8 {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.headerMenu{display: block;width: 100%;}
+.headerMenu .leftMenu{position: fixed;width: 15%;height: 100%;background-color: #1a4882;top: 0px;}
+.headerMenu .leftMenu ul{display: block;width: 100%;list-style: none;padding: 0px;}
+.headerMenu .leftMenu ul li{display: block;transition: all 0.3s ease;}
+.headerMenu .leftMenu ul li a{display: block;color: white;text-decoration: none;font-weight: bold;padding: 10px 20px;position: relative;}
+.headerMenu .leftMenu ul li a:after{content:'>';position: absolute;right: 20px;}
+.headerMenu .leftMenu ul li:hover{background-color: #6786ad;}
+.headerMenu .topMenu{display: block;width: 100%;background-color: #283d56;}
+.headerMenu .topMenu .navBar{min-height: 50px;}
+.headerMenu .body{display: block;padding-left: 15%;}
+.headerMenu .body .body-title{display: block;font-size: 16px;font-weight: bold;border: 1px solid #283d56;margin: 20px 30px;padding: 7px 14px;color: #283d56;}
+.headerMenu .body .body-body{display: block;font-size: 14px;font-weight: bold;border: 1px solid #283d56;margin: 20px 30px;padding: 14px 14px;color: #283d56;}

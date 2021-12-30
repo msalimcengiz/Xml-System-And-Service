@@ -1,0 +1,69 @@
+RewriteEngine On
+
+##################################
+
+RewriteRule ^xml/get$ services/xml/get.php?serviceName=xml/get 
+RewriteRule ^xml/operation$ services/xml/operation.php?serviceName=xml/operation 
+RewriteRule ^xml/delete$ services/xml/delete.php?serviceName=xml/delete 
+
+RewriteRule ^xmlTemp/get$ services/xmlTemp/get.php?serviceName=xmlTemp/get 
+RewriteRule ^xmlTemp/operation$ services/xmlTemp/operation.php?serviceName=xmlTemp/operation 
+RewriteRule ^xmlTemp/delete$ services/xmlTemp/delete.php?serviceName=xmlTemp/delete 
+
+RewriteRule ^jobs/dataTrigger$ services/jobs/dataTrigger.php?serviceName=jobs/dataTrigger
+
+RewriteRule ^xmlRunner/run$ services/xmlRunner/run.php?serviceName=xmlRunner/run 
+
+RewriteRule ^xmlMatch/control$ services/xmlMatch/control.php?serviceName=xmlMatch/control 
+
+RewriteRule ^matchCat/get$ services/matchCat/get.php?serviceName=matchCat/get 
+RewriteRule ^matchCat/operation$ services/matchCat/operation.php?serviceName=matchCat/operation 
+RewriteRule ^matchCat/delete$ services/matchCat/delete.php?serviceName=matchCat/delete 
+
+RewriteRule ^matchBrand/get$ services/matchBrand/get.php?serviceName=matchBrand/get 
+RewriteRule ^matchBrand/operation$ services/matchBrand/operation.php?serviceName=matchBrand/operation 
+RewriteRule ^matchBrand/delete$ services/matchBrand/delete.php?serviceName=matchBrand/delete 
+
+RewriteRule ^xmlProducts/xmlDelete$ services/xmlProducts/xmlDelete.php?serviceName=xmlProducts/xmlDelete
+RewriteRule ^xmlProducts/xmlGet$ services/xmlProducts/xmlGet.php?serviceName=xmlProducts/xmlGet
+RewriteRule ^xmlProducts/get$ services/xmlProducts/get.php?serviceName=xmlProducts/get 
+RewriteRule ^xmlProducts/operation$ services/xmlProducts/operation.php?serviceName=xmlProducts/operation 
+RewriteRule ^xmlProducts/sendProducts$ services/xmlProducts/sendProducts.php?serviceName=xmlProducts/sendProducts 
+RewriteRule ^xmlProducts/delete$ services/xmlProducts/delete.php?serviceName=xmlProducts/delete 
+
+RewriteRule ^merchant/get$ services/merchant/get.php?serviceName=merchant/get 
+
+RewriteRule ^brand/get$ services/brand/get.php?serviceName=brand/get 
+
+RewriteRule ^category/get$ services/category/get.php?serviceName=category/get 
+
+######### Api Service ############
+
+RewriteRule ^apis/get$ services/apis/get.php?serviceName=apis/get 
+RewriteRule ^apis/operation$ services/apis/operation.php?serviceName=apis/operation 
+RewriteRule ^apis/delete$ services/apis/delete.php?serviceName=apis/delete 
+
+RewriteRule ^apiAuth/get$ services/apiAuth/get.php?serviceName=apiAuth/get 
+RewriteRule ^apiAuth/operation$ services/apiAuth/operation.php?serviceName=apiAuth/operation 
+RewriteRule ^apiAuth/delete$ services/apiAuth/delete.php?serviceName=apiAuth/delete 
+
+RewriteRule ^apiAuthGroups/get$ services/apiAuthGroups/get.php?serviceName=apiAuthGroups/get 
+RewriteRule ^apiAuthGroups/operation$ services/apiAuthGroups/operation.php?serviceName=apiAuthGroups/operation 
+RewriteRule ^apiAuthGroups/delete$ services/apiAuthGroups/delete.php?serviceName=apiAuthGroups/delete 
+
+RewriteRule ^apiAuthAuthority/get$ services/apiAuthAuthority/get.php?serviceName=apiAuthAuthority/get 
+RewriteRule ^apiAuthAuthority/operation$ services/apiAuthAuthority/operation.php?serviceName=apiAuthAuthority/operation 
+RewriteRule ^apiAuthAuthority/delete$ services/apiAuthAuthority/delete.php?serviceName=apiAuthAuthority/delete 
+
+##################################
+
+RewriteRule ^404$ 404.php 
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+ErrorDocument 400 http://localhost/xmlService/404
+ErrorDocument 401 http://localhost/xmlService/404
+ErrorDocument 403 http://localhost/xmlService/404
+ErrorDocument 404 http://localhost/xmlService/404
+ErrorDocument 500 http://localhost/xmlService/404
